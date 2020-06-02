@@ -94,6 +94,9 @@ public class simple_tesse_controller : MonoBehaviour
 
         // cache time
         prev_time = Time.time;
+
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 30;
     }
 
     // Update is called once per frame

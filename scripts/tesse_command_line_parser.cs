@@ -175,6 +175,9 @@ namespace tesse
                     Screen.fullScreenMode = FullScreenMode.Windowed;
                 }
             }
+
+            QualitySettings.vSyncCount = 0;  // VSync must be disabled
+            Application.targetFrameRate = 30;
         }
     }
 }

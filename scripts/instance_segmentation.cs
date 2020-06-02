@@ -46,6 +46,9 @@ public class instance_segmentation : MonoBehaviour
         cam = GetComponent<Camera>();
         init_segmentation_camera(cam, instance_seg_replacement_shader, 0, Color.white);
    		update_instance_segmentation_for_scene(0);
+
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 30;
     }
 
     private void init_segmentation_camera( Camera cam, Shader shader, int mode, Color clear_color )

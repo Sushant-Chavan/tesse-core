@@ -58,6 +58,9 @@ public class object_segmentation : MonoBehaviour {
         position_interface = GetComponentInParent<tesse_position_interface>();
 
         init_segmentation_camera(cam, seg_replacement_shader, 0, Color.white);
+
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 30;
     }
 
     private void parse_color_mapping_csv( string csv_path )

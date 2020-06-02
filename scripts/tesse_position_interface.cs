@@ -194,6 +194,9 @@ namespace tesse
         {
             // setup various object parameters
             spawner = GetComponent<tesse_spawn_manager>();
+
+            QualitySettings.vSyncCount = 0;  // VSync must be disabled
+            Application.targetFrameRate = 30;
         }
 
         // Update is called once per frame

@@ -75,6 +75,9 @@ namespace tesse
             met_client.NoDelay = true;
             met_client.SendTimeout = 1000;
             met_client.ReceiveTimeout = 500;
+
+            QualitySettings.vSyncCount = 0;  // VSync must be disabled
+            Application.targetFrameRate = 30;
         }
 
         // Start is called before the first frame update
